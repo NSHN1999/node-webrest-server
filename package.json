@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch ./src/app.ts",
     "build": "rimraf ./dist && tsc && pnpm run prisma:migrate:prod",
-    "start": "pnpm run build",
+    "start": "pnpm run build && node ./dist/app.js",
     "prisma:migrate:prod": "prisma migrate deploy" 
   },
   "license": "ISC",
